@@ -24,50 +24,32 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Using Mongodb](https://kinsta.com/knowledgebase/nestjs/) Simple CRUD with MongoDB
 
-## Installation
+## Step
 
-```bash
-$ yarn install
-```
-
-## Running the app
+### 1.  Setting up Nest.js
 
 ```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+npm i -g @nestjs/cli
 ```
 
-## Test
+create new project
 
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+nest new nestjs-api-tutorial
+cd nestjs-api-tutorial
+npm run start:dev
 ```
 
-## Support
+### 2. Setting up MongoDB
+Sebelum melakukan setup, jalankan command berikut utk membuat API
+```bash
+nest generate module todos
+nest generate controller todos
+nest generate service todos
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
-
-Nest is [MIT licensed](LICENSE).
