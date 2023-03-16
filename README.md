@@ -43,12 +43,36 @@ npm run start:dev
 ```
 
 ### 2. Setting up MongoDB
-Sebelum melakukan setup, jalankan command berikut utk membuat API
+- Sebelum melakukan setup, jalankan command berikut utk membuat API
 ```bash
 nest generate module todos
 nest generate controller todos
 nest generate service todos
 ```
+- Selanjutnya install mongoose library
+```bash
+npm install --save @nestjs/mongoose mongoose
+```
+
+### 3. Buat Skema
+  define skema data di file `todos.schema.ts`
+
+### 4. Define interfaces nya
+  define pada file `interfaces/todo.interface.ts`
+
+### 5. Buat DTO (Data Transfer Object)
+  - define how the data will be sent atau passed from object to object over the network
+  define pada file `dto/create-todo.ts`
+
+### 6. Setting Up Model/Service
+  - service file bertanggung jawab untuk berinteraksi dan berkomunikasi dg database MongoDB. Digunakan untuk creating, retrieving, updating, dan deleting records dari skema `todos`
+
+### 7. Setting Up Controllers
+ada beberapa anotasi nya digunakan. contohnya, untuk handle routing system yang berkaitan dg setiap route :
+- `@Put()` : PUT
+- `@Get()` : GET
+- `@Delete()` : DELETE
+- `@Post()` : POST
 
 
 
